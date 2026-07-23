@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>tourism market representation + development in mexico | perch</title>
+<meta name="description" content="boutique tourism consultancy specializing in market representation, travel trade distribution, market development + commercial growth in Mexico.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Karla:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --teal:#0B8080;
+  --teal-deep:#075E5E;
+  --ink:#12343B;
+  --mist:#F1F7F6;
+  --line-a:#1E7AC4;
+  --line-b:#63D471;
+  --white:#ffffff;
+  --grad:linear-gradient(90deg,var(--line-a),var(--line-b));
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Karla',sans-serif;color:var(--ink);background:var(--white);line-height:1.65;font-size:17px}
+h1,h2,h3{font-family:'Sora',sans-serif;line-height:1.15}
+a{color:var(--teal);text-decoration:none}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.rule{height:4px;width:120px;background:var(--grad);border-radius:2px;margin:18px 0 0}
+.rule.center{margin:18px auto 0}
+
+/* nav */
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid #E4EEEC}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:10px;font-family:'Sora',sans-serif;font-weight:800;font-size:1.35rem;letter-spacing:.14em;color:var(--ink);text-transform:lowercase}
+.nav-links{display:flex;gap:32px;font-weight:700;font-size:.9rem;letter-spacing:.05em;text-transform:lowercase}
+.nav-links a{color:var(--ink);padding:6px 0;border-bottom:2px solid transparent;transition:.2s}
+.nav-links a:hover{color:var(--teal);border-bottom-color:var(--line-b)}
+@media(max-width:760px){.nav-links{display:none}}
+
+/* hero */
+.hero{padding:110px 0 90px;background:
+  radial-gradient(900px 420px at 85% -10%, rgba(99,212,113,.14), transparent 60%),
+  radial-gradient(700px 400px at -5% 110%, rgba(30,122,196,.10), transparent 60%),
+  var(--mist)}
+.hero h1{font-size:clamp(2.4rem,5.6vw,4rem);font-weight:800;text-transform:lowercase;max-width:16ch}
+.hero p{margin-top:26px;max-width:58ch;font-size:1.15rem;color:#3C555B}
+.hero .btns{margin-top:38px}
+.btn{display:inline-block;font-family:'Sora',sans-serif;font-weight:700;font-size:.95rem;padding:14px 32px;border-radius:999px;transition:.2s;text-transform:lowercase}
+.btn-primary{background:var(--teal);color:#fff}
+.btn-primary:hover{background:var(--teal-deep)}
+
+/* sections */
+section{padding:88px 0}
+h2{font-size:clamp(1.7rem,3.4vw,2.4rem);font-weight:700;text-transform:lowercase}
+.lede{margin-top:20px;max-width:62ch;font-size:1.1rem;color:#3C555B}
+.statement{background:var(--ink);color:#fff;text-align:center;padding:80px 0}
+.statement h2{color:#fff;max-width:30ch;margin:0 auto}
+.statement .big{font-family:'Sora',sans-serif;font-weight:700;font-size:1.25rem;color:#63D471;margin-top:26px}
+.statement p{margin:22px auto 0;max-width:58ch;color:#C7DAD8;font-size:1.08rem}
+
+/* services grid */
+#services{background:var(--mist)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px;margin-top:44px}
+.card{background:#fff;border:1px solid #E4EEEC;border-radius:14px;padding:30px 28px;position:relative;overflow:hidden;transition:.25s}
+.card::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:var(--grad);opacity:0;transition:.25s}
+.card:hover{transform:translateY(-4px);box-shadow:0 14px 32px rgba(18,52,59,.10);border-color:transparent}
+.card:hover::before{opacity:1}
+.card h3{font-size:1.15rem;font-weight:700;color:var(--teal-deep);text-transform:lowercase}
+.card p{margin-top:12px;font-size:.98rem;color:#3C555B}
+
+/* who */
+.wholist{margin-top:38px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px 40px;font-weight:700;font-size:1.02rem;color:var(--teal-deep)}
+.wholist div{padding:12px 0;border-bottom:1px solid #DCEAE7}
+
+/* about lorena */
+.about-grid{display:grid;grid-template-columns:1fr 1.5fr;gap:56px;align-items:start;margin-top:44px}
+@media(max-width:820px){.about-grid{grid-template-columns:1fr}}
+.about-photo{background:linear-gradient(160deg,var(--teal),var(--line-a));border-radius:16px;aspect-ratio:4/5;display:flex;align-items:flex-end;padding:26px;color:#fff}
+.about-photo .name{font-family:'Sora',sans-serif;font-weight:700;font-size:1.15rem}
+.about-photo .role{font-size:.85rem;opacity:.9;margin-top:4px}
+.about p{margin-top:18px;color:#3C555B}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+@media(max-width:560px){.stats{grid-template-columns:1fr}}
+.stat{border-left:4px solid;border-image:var(--grad) 1;padding-left:16px}
+.stat b{font-family:'Sora',sans-serif;font-size:1.5rem;color:var(--teal-deep);display:block}
+.stat span{font-size:.85rem;color:#5A7378}
+
+/* cta */
+.cta{background:var(--ink);text-align:center}
+.cta h2{color:#fff}
+.cta .btn-primary{margin-top:34px;background:var(--line-b);color:var(--ink)}
+.cta .btn-primary:hover{background:#7FE08A}
+
+/* footer */
+footer{background:#0C272C;color:#9FBBB8;padding:56px 0 40px;font-size:.92rem}
+.foot{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap}
+.foot .logo{color:#fff;font-size:1.1rem}
+.foot a{color:#C7DAD8}
+.foot a:hover{color:#fff}
+.foot .col p{margin-top:14px;max-width:40ch}
+.foot ul{list-style:none;margin-top:14px;display:grid;gap:8px;text-transform:lowercase}
+.copyright{margin-top:44px;padding-top:22px;border-top:1px solid #1B3A40;font-size:.8rem;color:#6C8B89;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top" aria-label="perch home">
+      <svg width="44" height="30" viewBox="0 0 44 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs><linearGradient id="g" x1="0" y1="0" x2="44" y2="0"><stop stop-color="#1E7AC4"/><stop offset="1" stop-color="#63D471"/></linearGradient></defs>
+        <path d="M20 17c0-5 4-8 8.5-8 3.4 0 5.5 1.6 6.5 3.4l5-1.4-3.6 3.8c.1.5.1 1 .1 1.5 0 4.6-4 7.7-8.5 7.7-2.1 0-4-.6-5.5-1.7L18 25l1.6-3.4c.2-.5-.1-1-.6-1.2L20 17z" fill="#0B8080"/>
+        <circle cx="32.6" cy="12.6" r="1" fill="#fff"/>
+        <rect x="0" y="23" width="44" height="3" rx="1.5" fill="url(#g)"/>
+      </svg>
+      perch
+    </a>
+    <nav class="nav-links" aria-label="main">
+      <a href="#about">about</a>
+      <a href="#services">services</a>
+      <a href="#who">who we serve</a>
+      <a href="#contact">contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- hero -->
+<section class="hero">
+  <div class="wrap">
+    <h1>representation that sells</h1>
+    <div class="rule"></div>
+    <p>boutique tourism consultancy specializing in market representation, travel trade distribution, experience positioning + commercial growth in mexico.</p>
+    <div class="btns">
+      <a class="btn btn-primary" href="#services">see how perch works</a>
+    </div>
+  </div>
+</section>
+
+<!-- statement -->
+<section class="statement" id="about">
+  <div class="wrap reveal">
+    <h2>commercial growth for destinations + tourism brands in mexico</h2>
+    <div class="rule center"></div>
+    <p class="big">most agencies sell visibility. perch makes you part of how the market sells.</p>
+    <p>in mexico, travel decisions are made during itinerary planning — and the travel trade drives what gets included. perch builds the continuous market presence, trade relationships + distribution channels that turn awareness into measurable bookings.</p>
+  </div>
+</section>
+
+<!-- services -->
+<section id="services">
+  <div class="wrap">
+    <h2>what perch can do</h2>
+    <div class="rule"></div>
+    <div class="grid">
+      <div class="card reveal">
+        <h3>map the market</h3>
+        <p>build your mexico market distribution landscape: how your category is sold today, which operators, agencies, OTAs + receptive partners matter most, and where the gaps + barriers are.</p>
+      </div>
+      <div class="card reveal">
+        <h3>represent your brand</h3>
+        <p>maintain a continuous strategic presence in mexico — account management, industry events, executive visit coordination + an active pipeline of priority accounts.</p>
+      </div>
+      <div class="card reveal">
+        <h3>open new business</h3>
+        <p>prospect + develop high-potential accounts across european circuits, FIT, premium, families, groups, incentive + MICE — validated against real market findings.</p>
+      </div>
+      <div class="card reveal">
+        <h3>expand distribution</h3>
+        <p>get your product into itineraries, tour programs + commercial portfolios across national, regional + luxury operators, 8,600+ registered agencies and latin america's leading OTAs.</p>
+      </div>
+      <div class="card reveal">
+        <h3>strengthen partnerships</h3>
+        <p>deepen relationships with distribution partners through channel development, co-op initiatives + performance support that keeps your product prioritized.</p>
+      </div>
+      <div class="card reveal">
+        <h3>equip the trade</h3>
+        <p>turn your experience into a compelling trade proposition — localized sales tools, travel trade education, training + content that build seller confidence + recommendation.</p>
+      </div>
+      <div class="card reveal">
+        <h3>position the experience</h3>
+        <p>strengthen brand preference through a localized commercial narrative, PR + industry media, and strategic collaborations that make you a must-visit within itineraries.</p>
+      </div>
+      <div class="card reveal">
+        <h3>inform every decision</h3>
+        <p>continuous market intelligence, trend + competitive analysis, monthly executive reporting + quarterly business reviews that translate insight into action.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- who -->
+<section id="who">
+  <div class="wrap">
+    <h2>who perch works with</h2>
+    <div class="rule"></div>
+    <div class="wholist reveal">
+      <div>attractions + iconic experiences</div>
+      <div>destinations, DMOs + tourism boards</div>
+      <div>sports + entertainment organizations</div>
+      <div>scenic rail + mountain experiences</div>
+      <div>hotels, resorts + hotel groups</div>
+      <div>airlines, cruise + rail</div>
+      <div>tour operators, DMCs + receptive operators</div>
+      <div>any tourism brand serious about growing in mexico</div>
+    </div>
+  </div>
+</section>
+
+<!-- lorena -->
+<section id="expert" style="background:var(--mist)">
+  <div class="wrap">
+    <h2>subject matter expert</h2>
+    <div class="rule"></div>
+    <div class="about-grid">
+      <div class="about-photo reveal">
+        <div>
+          <div class="name">Lorena Pereda Chávez</div>
+          <div class="role">market development + strategic representation | tourism industry specialist</div>
+        </div>
+      </div>
+      <div class="about reveal">
+        <p>lorena is a market development consultant with more than 15 years of experience helping international destinations, attractions + travel brands establish, expand + strengthen their presence in the mexican tourism market.</p>
+        <p>her expertise spans the full tourism value chain — commercial representation, travel trade engagement, distribution development, strategic partnerships, tourism marketing, PR + content strategy — with deep relationships across mexico's operators, wholesalers, OTAs, airlines, DMCs, tourism media + trade associations.</p>
+        <p>representing visit orlando in mexico, she led one of the country's largest travel trade education programs; several of her content + communication strategies were later adopted as reference models across latin america. most recently she has led the mexico market development strategy for the new york yankees.</p>
+        <div class="stats">
+          <div class="stat"><b>15+</b><span>years in mexico's tourism market</span></div>
+          <div class="stat"><b>200+</b><span>seminars, webinars + trainings delivered</span></div>
+          <div class="stat"><b>16,000+</b><span>travel professionals trained nationwide</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- cta -->
+<section class="cta" id="contact">
+  <div class="wrap reveal">
+    <h2>ready to perch?</h2>
+    <div class="rule center"></div>
+    <a class="btn btn-primary" href="mailto:hello@pechreps.com">let's talk.</a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div class="col">
+      <div class="logo" style="display:flex;align-items:center;gap:10px;font-family:'Sora',sans-serif;font-weight:800;letter-spacing:.14em">
+        <svg width="36" height="25" viewBox="0 0 44 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs><linearGradient id="g2" x1="0" y1="0" x2="44" y2="0"><stop stop-color="#1E7AC4"/><stop offset="1" stop-color="#63D471"/></linearGradient></defs>
+          <path d="M20 17c0-5 4-8 8.5-8 3.4 0 5.5 1.6 6.5 3.4l5-1.4-3.6 3.8c.1.5.1 1 .1 1.5 0 4.6-4 7.7-8.5 7.7-2.1 0-4-.6-5.5-1.7L18 25l1.6-3.4c.2-.5-.1-1-.6-1.2L20 17z" fill="#63D471"/>
+          <circle cx="32.6" cy="12.6" r="1" fill="#0C272C"/>
+          <rect x="0" y="23" width="44" height="3" rx="1.5" fill="url(#g2)"/>
+        </svg>
+        perch
+      </div>
+      <p><strong style="color:#fff">about</strong><br>perch is a boutique market development + strategic representation practice helping international tourism brands build sustainable commercial presence in mexico.</p>
+    </div>
+    <div class="col">
+      <strong style="color:#fff;font-family:'Sora',sans-serif;font-size:.85rem;letter-spacing:.1em">explore</strong>
+      <ul>
+        <li><a href="#about">about</a></li>
+        <li><a href="#services">services</a></li>
+        <li><a href="#who">who we serve</a></li>
+        <li><a href="#contact">contact</a></li>
+      </ul>
+    </div>
+    <div class="col">
+      <strong style="color:#fff;font-family:'Sora',sans-serif;font-size:.85rem;letter-spacing:.1em">contact</strong>
+      <ul>
+        <li><a href="mailto:hello@pechreps.com">hello@pechreps.com</a></li>
+        <li><a href="#">linkedin</a></li>
+        <li>mexico city, mexico</li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap copyright">
+    <span>© 2026 perch. all rights reserved.</span>
+    <span>market development + strategic representation · mexico</span>
+  </div>
+</footer>
+
+<script>
+const io = new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

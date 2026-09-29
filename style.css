@@ -146,3 +146,25 @@ footer{padding:25px 0 34px}
   .method-mark{display:none}
   .footer-brand img{width:min(360px,86vw);max-width:none}
 }
+
+/* Accessibility, mobile and performance fixes (technical audit)
+   No changes to palette, copy or layout. */
+img{max-width:100%}
+.brand img,.method-mark img,.footer-brand img{height:auto}
+/* Visible keyboard focus (WCAG 2.4.7) */
+a:focus{outline:2px solid var(--purple);outline-offset:4px}
+a:focus:not(:focus-visible){outline:none}
+a:focus-visible{outline:2px solid var(--purple);outline-offset:4px;border-radius:2px}
+/* Tap targets >= 44px without changing the visual underline */
+.text-link,.email{position:relative}
+.text-link::after,.email::after{content:"";position:absolute;left:-6px;right:-6px;top:50%;min-height:48px;height:100%;transform:translateY(-50%)}
+.brand a{min-height:44px}
+/* Service numerals: 24px = WCAG "large text", so pink on white (3.19:1) meets 3:1 */
+.services article span{font-size:24px}
+@media (max-width:600px){
+  /* Legible minimum sizes on small screens */
+  .eyebrow.small{font-size:11px}
+  .teaser p{font-size:13px}
+  .footer-lines{font-size:12px}
+  .teaser{gap:20px}
+}
